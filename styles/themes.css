@@ -1,6 +1,35 @@
+.page.theme-dark {
+    --bg-color:#000000;
+    --main-color:#00CC14;
+    --accent-color: rgba(0,204,20,0.6);
+    --card-font-weight:465;
+    --title-font-weight:785;
+    --heart-border: #00CC14;
+}
+.page.theme-light {
+    --bg-color:#FFFFFF;
+    --main-color:#000000;
+    --accent-color: rgb(0,0,0);
+    --card-font-weight:400;
+    --title-font-weight:700;
+    --heart-border: #000;
+    --bg-image: url(../svg/pattern-light.svg);
+}
 /* В этом файле вы опишете значения переменных в разных цветовых схемах.
 Придерживайтесь такого именования классов:
 ✦ theme-dark — класс тёмной темы
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+@media (prefers-color-scheme: dark) {
+    .page {
+    --bg-color:#000000;
+    --main-color:#00CC14;
+    --accent-color: rgba(0,204,20,0.6);
+    --bg-image: url(../svg/pattern-dark.svg);
+    --title-font-weight:785;
+    --heart-border: #00CC14;
+    }
+}
+
