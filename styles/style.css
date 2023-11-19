@@ -214,7 +214,7 @@ button {
   block-size: 34px;
   outline: 2px solid transparent;
   transition: outline 0.3s ease;
-  border:none; 
+  border:none;
 }
 .card__icon-button:focus {
   outline:none;
