@@ -44,8 +44,7 @@ button {
   background-color: var(--bg-color);
   text-align: center;
   border: 2px solid currentColor;
-  min-block-size: 327px;
-  padding-block-end: 25px;
+  padding: clamp(120px, 32dvi, 136px) 0 25px;
   margin-block-end: 100px;
 }
 .header__title {
@@ -65,8 +64,9 @@ button {
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 9px;
   align-items: start;
+  justify-content: center;
 }
 .theme-menu__button {
   position: relative;
@@ -111,6 +111,7 @@ button {
   content: "▶";
   position: absolute;
   inset-inline-start: -20px;
+  inset-block-start: 0;
   animation: menuitem 0.5s infinite ease-in-out alternate;
 }
 
@@ -118,14 +119,16 @@ button {
   margin-inline-start: auto;
   margin-inline-end: auto;
   inline-size: var(--card-width);
+  padding-block-end:100px;
+}
+.card {
   background-color: var(--bg-color);
-  outline:2px solid currentColor;
+  outline: 2px solid currentColor;
 }
 .card__part {
   display: grid;
   gap: 25px;
   margin-block-end: 50px;
-
 }
 
 .main__title {
@@ -133,6 +136,7 @@ button {
   font-size: 18px;
   text-align: left;
   padding-inline-start: 10px;
+  padding-block:3px;
 }
 .main__image {
   object-fit: cover;
@@ -144,14 +148,14 @@ button {
   margin-inline: 25px;
   font-family: inherit;
   font-variation-settings: "wght" var(--card-font-weight);
-  font-size:18px;
-  line-height:1.18;
+  font-size: 18px;
+  line-height: 1.18;
 }
 .card__like-part {
-  margin-inline-end: 25px;
+  margin-inline-end: 30px;
   margin-block-end: 25px;
   display: flex;
-  gap: 10px;
+  gap: 3px;
   justify-content: end;
 }
 
@@ -207,17 +211,17 @@ button {
 
 .card__like-button {
   inline-size: 126px;
-  block-size: 34px;
+  min-block-size: 34px;
   background-color: var(--bg-color);
 }
 .card__icon-button {
   block-size: 34px;
   outline: 2px solid transparent;
   transition: outline 0.3s ease;
-  border:none;
+  border: none;
 }
 .card__icon-button:focus {
-  outline:none;
+  outline: none;
 }
 .card__icon-button:focus-visible {
   outline: 2px solid currentColor;
@@ -227,13 +231,13 @@ button {
   justify-content: center;
   align-items: center;
   gap: 8px;
+  flex-wrap: wrap;
   margin-inline-start: auto;
   margin-inline-end: auto;
   padding: 15px;
   min-inline-size: 306px;
   inline-size: min(80dvi, 335px);
   background-color: var(--bg-color);
-  margin-block-end:100px;
 }
 .footer__svg {
   position: relative;
