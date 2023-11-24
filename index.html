@@ -408,14 +408,16 @@
       </svg>
       <span class="button__text">Сохранить на память</span>
     </button>
-    <dialog id="dialog-id">
+    <dialog id="dialog-id" class = "dialog">
+      <form method="dialog" class="dialog__form">
       <svg viewBox="0 0 28 28" class="footer__svg dialog__svg">
         <use href="./svg/floppy.svg#floppy" />
       </svg>
       <h2 class="header__subtitle dialog__title">Вставьте <br> дискету, чтобы продолжить</h2>
-      <button class="button dialog__button" type="button" onclick="window['dialog-id'].close()">
+      <button type="submit" class="dialog__button button" onclick="window['save-dialog'].close();">
         <span class="button__text">Ок</span>
       </button>
+    </form>
     </dialog>
   </main>
   <script src="./scripts/set-theme.js"></script>
