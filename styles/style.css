@@ -33,24 +33,26 @@ button {
   font-family: var(--accent-font), sans-serif;
 }
 
-dialog {
+.dialog {
   position: fixed;
   inset: 0;
-  display: grid;
   border: 1px solid var(--accent-color);
   max-inline-size: 353px;
   inline-size: 80%;
   transition: opacity 0.3s ease-in-out;
   background-color: var(--bg-color);
   padding: 30px;
+  
+}
+.dialog__form {
+  display: grid;
   grid-template-areas: "icon text" "button button";
 }
-
-dialog:not([open]) {
+.dialog:not([open]) {
   opacity: 0;
   pointer-events: none;
 }
-dialog::backdrop {
+.dialog::backdrop {
   background-color: rgb(0 0 0 / 0.7);
 }
 .header {
