@@ -1,6 +1,45 @@
+.page.theme-dark {
+    --bg-color:#000000;
+    --main-color:#00CC14;
+    --accent-color: rgba(0,204,20,0.6);
+    --card-font-weight:465;
+    --title-font-weight:785;
+    --heart-border: #00CC14;
+    --bg-image: repeating-linear-gradient(to right,#000 0 2px,transparent 2px 4px),
+    repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px),
+    linear-gradient(to bottom, #007f0c 0.01%, #004306);
+    --button-text-color: #000;
+}
+.page.theme-light {
+    --bg-color:#FFFFFF;
+    --main-color:#000000;
+    --accent-color: rgb(0,0,0);
+    --card-font-weight:400;
+    --title-font-weight:700;
+    --heart-border: #000;
+    --bg-image: repeating-linear-gradient(to right,#d3d3d3 0 2px,transparent 2px 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+    --button-text-color: #fff;
+}
 /* В этом файле вы опишете значения переменных в разных цветовых схемах.
 Придерживайтесь такого именования классов:
 ✦ theme-dark — класс тёмной темы
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+@media (prefers-color-scheme: dark) {
+    .page {
+    --bg-color:#000000;
+    --main-color:#00CC14;
+    --accent-color: rgba(0,204,20,0.6);
+    --title-font-weight:785;
+    --heart-border: #00CC14;
+    --bg-image: repeating-linear-gradient(to right,#000 0 2px,transparent 2px 4px),
+    repeating-linear-gradient(to bottom, #000 0 2px, transparent 2px 4px),
+    linear-gradient(to bottom, #007f0c 0.01%, #004306);
+    --button-text-color: #000;
+    }
+}
+
